@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample School - Responsive Website</title>
+    <!-- Moved Font Awesome link higher -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sticky-header-area"> <!-- Start of the sticky wrapper -->
+    <div class="top-bar">
+        <div class="left-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <span><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:123-456-7890">123-456-7890</a>, <a href="tel:987-654-3210">987-654-3210</a></span>
+        </div>
+        <div class="right-links">
+            <button class="studybase-btn">📘 Studybase App</button>
+            <a href="#">Login</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="logo">
+            <img src="https://images.pexels.com/photos/5088017/pexels-photo-5088017.jpeg?auto=compress&cs=tinysrgb&w=150&h=70&dpr=1" alt="Sample School Logo - Stack of books">
+        </div>
+        <div class="school-details">
+            <h1>Sample School (CBSE)</h1>
+            <p>Sample Location, Sample City - 123456<br/>CBSE Affiliation No.: XXXXXX</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li>
+                <a href="#about">About Us <i class="fas fa-chevron-down nav-arrow" aria-hidden="true"></i></a>
+                <div class="dropdown">
+                    <a href="#">Our Mission</a>
+                    <a href="#">History</a>
+                    <a href="#">Infrastructure</a>
+                </div>
+            </li>
+            <li>
+                <a href="#admission">Admission <i class="fas fa-chevron-down nav-arrow" aria-hidden="true"></i></a>
+                <div class="dropdown">
+                    <a href="#">Process</a>
+                    <a href="#">Eligibility</a>
+                    <a href="#">Download Forms</a>
+                </div>
+            </li>
+            <li>
+                <a href="#academics">Academics <i class="fas fa-chevron-down nav-arrow" aria-hidden="true"></i></a>
+                <div class="dropdown">
+                    <a href="#">Curriculum</a>
+                    <a href="#">Departments</a>
+                    <a href="#">Exam Schedule</a>
+                </div>
+            </li>
+            <li>
+                <a href="#activities">Activities <i class="fas fa-chevron-down nav-arrow" aria-hidden="true"></i></a>
+                <div class="dropdown">
+                    <a href="#">Sports</a>
+                    <a href="#">Clubs</a>
+                    <a href="#">Events</a>
+                </div>
+            </li>
+            <li>
+                <a href="#disclosure">Mandatory Disclosure <i class="fas fa-chevron-down nav-arrow" aria-hidden="true"></i></a>
+                <div class="dropdown">
+                    <a href="#">General Information</a>
+                    <a href="#">Documents & Reports</a>
+                    <a href="#">Results & Academics</a>
+                    <a href="#">Staff Information</a>
+                    <a href="#">Fee Structure</a>
+                </div>
+            </li>
+            <li>
+                <a href="#gallery">Gallery & Resources</a>
+                <!-- No dropdown needed for this one -->
+            </li>
+        </ul>
+        <div class="nav-icons">
+            <button class="search-icon" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+</div> <!-- End of the sticky wrapper -->
+
+    <main class="main-content"> <!-- Added a class to main for easier targeting -->
+        <section id="home" class="carousel-container"> <!-- Added ID -->
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=450&dpr=1" class="carousel-img active" alt="Welcome to Sample School - School building exterior">
+                    <img src="https://images.pexels.com/photos/8617968/pexels-photo-8617968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=450&dpr=1" class="carousel-img" alt="Celebrating Success - Students in graduation caps">
+                    <img src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=450&dpr=1" class="carousel-img" alt="Learning Environment - Students raising hands in a classroom">
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous slide">❮</button>
+                <button class="carousel-btn next" aria-label="Next slide">❯</button>
+            </div>
+        </section>
+
+        <section id="updates" class="updates-section" aria-labelledby="updates-heading"> <!-- Added ID -->
+             <div class="updates-container">
+                <div class="updates-marquee">
+                     <h2 id="updates-heading" class="visually-hidden">Latest Updates</h2>
+                     <div class="updates-scroll">
+                        <div class="update-item">
+                            <span class="update-date">03 May 2025</span> <h3 class="update-title">New Academic Session 2025-26 Begins Soon</h3>
+                        </div>
+                        <div class="update-item">
+                            <span class="update-date">28 Apr 2025</span> <h3 class="update-title">Summer Camp Registrations Closing</h3>
+                        </div>
+                        <div class="update-item">
+                            <span class="update-date">20 Apr 2025</span> <h3 class="update-title">CBSE Results 2025 Awaited</h3>
+                        </div>
+                        <div class="update-item">
+                            <span class="update-date">15 Apr 2025</span> <h3 class="update-title">Annual Sports Day Highlights</h3>
+                        </div>
+                        <div class="update-item">
+                            <span class="update-date">10 Apr 2025</span> <h3 class="update-title">Library Renovation Complete</h3>
+                        </div>
+                        <div class="update-item">
+                            <span class="update-date">05 Apr 2025</span> <h3 class="update-title">Parent-Teacher Meeting Schedule</h3>
+                        </div>
+                        <!-- Duplicate items for seamless loop -->
+                         <div class="update-item">
+                            <span class="update-date">03 May 2025</span> <h3 class="update-title">New Academic Session 2025-26 Begins Soon</h3>
+                        </div>
+                        <div class="update-item">
+                            <span class="update-date">28 Apr 2025</span> <h3 class="update-title">Summer Camp Registrations Closing</h3>
+                        </div>
+                        <div class="update-item">
+                            <span class="update-date">20 Apr 2025</span> <h3 class="update-title">CBSE Results 2025 Awaited</h3>
+                        </div>
+                        <div class="update-item">
+                            <span class="update-date">15 Apr 2025</span> <h3 class="update-title">Annual Sports Day Highlights</h3>
+                        </div>
+                        <div class="update-item">
+                            <span class="update-date">10 Apr 2025</span> <h3 class="update-title">Library Renovation Complete</h3>
+                        </div>
+                        <div class="update-item">
+                            <span class="update-date">05 Apr 2025</span> <h3 class="update-title">Parent-Teacher Meeting Schedule</h3>
+                        </div>
+                        </div>
+                </div>
+                <button class="view-all-btn">View All Updates</button>
+            </div>
+        </section>
+
+        <section class="principal-message">
+            <div class="message-container container">
+                <h2>Message from the Principal</h2>
+                <div class="message-layout">
+                    <div class="principal-photo">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=250&h=300&dpr=1" alt="Sample Principal - Headshot">
+                    </div>
+                    <div class="message-text-content">
+                        <div class="message-content">
+                            <p>Dear Parents, Students and Well-wishers,</p>
+                            <p>With the advent of the National Education Policy (NEP 2020), we are presented with innovative ideas to align school education with modern requirements. The educational structure has been remodeled to a 5+3+3+4 system, emphasizing foundational learning (pre-school to grade 2), preparatory stage (grades 3-5), middle school (grades 6-8), and secondary education (grades 9-12). This new system emphasizes experiential learning focused on developing competencies rather than mere memorization of facts.</p>
+                            <p>Our vision through this approach is to nurture compassionate individuals with critical thinking, scientific temper, creativity, and strong ethical values. We aim to build an equitable, inclusive society while maintaining the core values of our education - Competence, Conscience, Compassion, and Commitment.</p>
+                            <p>Since 1981, we have been committed to shaping young minds. The challenges of the modern world and NEP 2020 implementation require us to continuously evolve while maintaining our core values. We invite all stakeholders to join us in this mission to build a better India grounded in constitutional values.</p>
+                            <div class="principal-signature" style="margin-top: 15px;"> <!-- Added margin for spacing -->
+                                <p class="signature-greeting">With warm regards,</p>
+                                <p class="principal-name">Sample Principal</p>
+                                <p class="principal-title">Principal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="count-section" id="stats" aria-labelledby="stats-heading">
+            <h2 id="stats-heading" class="visually-hidden">School Statistics</h2> <!-- This heading IS correctly hidden -->
+             <div class="count-grid container">
+                <div class="count-box">
+                    <h2 data-target="1500">1500</h2> <!-- Pre-fill for non-JS -->
+                    <p>Students Enrolled</p>
+                </div>
+                <div class="count-box">
+                    <h2 data-target="120">120</h2>
+                    <p>Qualified Teachers</p>
+                </div>
+                <div class="count-box">
+                    <h2 data-target="44">44</h2> <p>Years of Excellence</p>
+                </div>
+                <div class="count-box">
+                    <h2 data-target="60">60</h2>
+                    <p>Activities & Clubs</p> <!-- Changed text slightly -->
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page-section">
+            <div class="about-container container">
+                <h2>About Our School</h2>
+                <div class="message-layout">
+                    <div class="principal-photo">
+                        <img src="https://images.pexels.com/photos/1106468/pexels-photo-1106468.jpeg?auto=compress&cs=tinysrgb&w=250&h=300&dpr=1" alt="Sample School Building - Modern architecture">
+                    </div>
+                    <div class="message-text-content">
+                        <div class="about-content">
+                            <p><strong>Founded in XXXX, Sample School has a rich history of academic excellence and holistic development.</strong></p>
+                            <p>Located in the heart of Sample Location, Sample City, our school provides a nurturing and stimulating environment affiliated with the Central Board of Secondary Education (CBSE). We are dedicated to fostering intellectual curiosity, critical thinking, and strong ethical values in our students.</p>
+                            <p>Our campus boasts modern infrastructure, well-equipped laboratories, extensive sports facilities, and a dedicated faculty committed to guiding students towards achieving their full potential. We believe in a balanced approach to education, integrating rigorous academics with a wide range of co-curricular and extracurricular activities.</p>
+                            <a href="#" class="read-more-btn">Learn More About Us</a>
+                        </div>
+                    </div>
+                </div>
+            <div class="content-box-container container">
+                <h4>Our Mission</h4>
+                <p>To provide holistic education that nurtures intellectual growth, ethical values, and social responsibility, preparing students to be compassionate and competent global citizens.</p>
+                <h4>History</h4>
+                <p>Established in XXXX by the Sample Educational Society, Sample School started with a small group of students and has grown into a leading institution known for its commitment to quality education and character development.</p>
+                <h4>Infrastructure</h4>
+                <p>Our campus features state-of-the-art facilities including spacious digital classrooms, well-equipped science and computer labs, a comprehensive library, an auditorium, dedicated art and music rooms, and extensive sports grounds.</p>
+            </div>
+        </section>
+
+        <section id="admission" class="page-section">
+            <div class="about-container container">  <h2>Admission</h2>
+                <div class="message-layout">
+                    <div class="principal-photo">  <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=250&h=300&dpr=1" alt="Admission image">
+                    </div>
+                    <div class="message-text-content">  <div class="about-content">
+                            <p>We welcome aspiring students to join the Sample School family. Our admission process is designed to be transparent and fair, ensuring a smooth transition for new students.</p>
+                            <a href="#" class="read-more-btn">Explore Admission</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box-container container">
+                    <h4>Admission Process</h4>
+                    <p>The process typically involves: 1. Obtaining the application form from the school office or website. 2. Submitting the completed form with required documents. 3. An interaction session for younger grades or an entrance assessment for higher grades. 4. Notification of admission status.</p>
+                    <h4>Eligibility Criteria</h4>
+                    <p>Eligibility is based on age criteria set by CBSE guidelines and successful completion of the preceding class (for Grade 1 onwards). Specific age requirements are detailed in the admission brochure.</p>
+                    <h4>Download Forms</h4>
+                    <p>The admission form for the 2025-2026 academic session can be downloaded here: <a href="#" class="read-more-btn download-btn">Download Form</a> (Link inactive - Sample)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="academics" class="page-section">
+            <div class="about-container container">  <h2>Academics</h2>
+                <div class="message-layout">
+                    <div class="principal-photo">  <img src="https://images.pexels.com/photos/177558/pexels-photo-177558.jpeg?auto=compress&cs=tinysrgb&w=250&h=300&dpr=1" alt="Academics image">
+                    </div>
+                    <div class="message-text-content">  <div class="about-content">
+                            <p>Our academic program follows the CBSE curriculum, focusing on conceptual clarity, critical thinking, and application-based learning to prepare students for future challenges.</p>
+                            <a href="#" class="read-more-btn">Discover Academics</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box-container container">
+                    <h4>Curriculum</h4>
+                    <p>We offer a broad and balanced curriculum covering Languages, Mathematics, Sciences, Social Sciences, Computer Science, Arts, and Physical Education, integrated with co-scholastic activities aligned with NEP 2020.</p>
+                    <h4>Departments</h4>
+                    <p>Dedicated departments for English, Tamil, Hindi, Mathematics, Physics, Chemistry, Biology, Computer Science, Commerce, and Social Studies ensure specialized focus and effective teaching methodologies.</p>
+                    <h4>Exam Schedule</h4>
+                    <p>The academic year includes Periodic Tests, Half-Yearly Exams, and Annual Examinations. A detailed calendar is provided at the start of the session. View the tentative schedule: <a href="#">Exam Calendar</a> (Link inactive - Sample)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="activities" class="page-section">
+            <div class="about-container container">  <h2>Activities</h2>
+                <div class="message-layout">
+                    <div class="principal-photo">  <img src="https://images.pexels.com/photos/3775566/pexels-photo-3775566.jpeg?auto=compress&cs=tinysrgb&w=250&h=300&dpr=1" alt="Activities image">
+                    </div>
+                    <div class="message-text-content">  <div class="about-content">
+                            <p>Beyond academics, we offer a rich tapestry of activities to nurture talents, promote teamwork, and ensure the holistic development of our students.</p>
+                            <a href="#" class="read-more-btn">Explore Activities</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box-container container">
+                    <h4>Sports</h4>
+                    <p>Facilities and coaching are available for Athletics, Football, Cricket, Basketball, Volleyball, Badminton, Table Tennis, Chess, and Yoga. We actively participate in inter-school competitions.</p>
+                    <h4>Clubs</h4>
+                    <p>Students can engage in various clubs like Eco Club, Science Club, Literary Club (English/Tamil/Hindi), Quiz Club, Art & Craft Club, Music & Dance Club, and IT Club.</p>
+                    <h4>Events</h4>
+                    <p>Our school year is marked by vibrant events including Annual Day, Sports Day, Science Exhibition, Cultural Fest, Independence Day, Republic Day, Teacher's Day, Children's Day, and various awareness programs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="disclosure" class="page-section">
+            <div class="about-container container">  <h2>Mandatory Disclosure</h2>
+                <div class="message-layout">
+                    <div class="principal-photo">  <img src="https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg?auto=compress&cs=tinysrgb&w=250&h=300&dpr=1" alt="Disclosure image">
+                    </div>
+                    <div class="message-text-content">  <div class="about-content">
+                            <p>As per CBSE norms, all required information is publicly available. Please find the relevant details below or contact the school office for specific documents.</p>
+                            <a href="#" class="read-more-btn">View Disclosures</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Accordion for Disclosure -->
+                <div class="accordion-container container">
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false" id="accordion-button-1" aria-controls="accordion-panel-1">General Information</button>
+                        <div class="accordion-panel" id="accordion-panel-1" role="region" aria-labelledby="accordion-button-1">
+                            <h4>Basic School Details</h4>
+                            <table class="disclosure-table">
+                                <tr><th>Information</th><th>Details</th></tr>
+                                <tr><td>School Name</td><td>Sample School</td></tr>
+                                <tr><td>Affiliation No.</td><td>XXXXXX</td></tr>
+                                <tr><td>School Code</td><td>XXXXX</td></tr>
+                                <tr><td>Address</td><td>Sample Location, Sample City - 123456, Sample State</td></tr>
+                                <tr><td>Principal Name & Qualification</td><td>Sample Principal, M.Sc., M.Ed. (Sample)</td></tr>
+                                <tr><td>School Email ID</td><td>info@sampleschool.edu (Sample)</td></tr>
+                                <tr><td>Contact Details (Landline/Mobile)</td><td>123-456-7890, 987-654-3210 (Sample)</td></tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false" id="accordion-button-2" aria-controls="accordion-panel-2">Documents & Reports</button>
+                        <div class="accordion-panel" id="accordion-panel-2" role="region" aria-labelledby="accordion-button-2">
+                            <h4>Important Documents (Sample Links)</h4>
+                            <table class="disclosure-table">
+                                <tr><th>Document Name</th><th>Link/Status</th></tr>
+                                <tr><td>Copy of Affiliation/Upgradation Letter</td><td><a href="#" target="_blank">View Document</a></td></tr>
+                                <tr><td>Copy of Societies/Trust/Company Registration</td><td><a href="#" target="_blank">View Document</a></td></tr>
+                                <tr><td>Copy of No Objection Certificate (NOC)</td><td><a href="#" target="_blank">View Document</a></td></tr>
+                                <tr><td>Copy of Recognition Certificate</td><td><a href="#" target="_blank">View Document</a></td></tr>
+                                <tr><td>Copy of Building Safety Certificate</td><td><a href="#" target="_blank">View Document</a> (Valid until DD/MM/YYYY)</td></tr>
+                                <tr><td>Copy of Fire Safety Certificate</td><td><a href="#" target="_blank">View Document</a> (Valid until DD/MM/YYYY)</td></tr>
+                                <tr><td>Copy of DEO Certificate (RTE Compliance)</td><td><a href="#" target="_blank">View Document</a></td></tr>
+                                <tr><td>Copy of Water, Health and Sanitation Certificate</td><td><a href="#" target="_blank">View Document</a> (Valid until DD/MM/YYYY)</td></tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false" id="accordion-button-3" aria-controls="accordion-panel-3">Results & Academics</button>
+                        <div class="accordion-panel" id="accordion-panel-3" role="region" aria-labelledby="accordion-button-3">
+                            <h4>Board Exam Results (Last 3 Years - Sample)</h4>
+                            <table class="disclosure-table">
+                                <tr><th>Year</th><th>Class</th><th>Students Appeared</th><th>Pass Percentage</th><th>Students > 90%</th></tr>
+                                <tr><td>2024</td><td>X</td><td>125</td><td>100%</td><td>30</td></tr>
+                                <tr><td>2024</td><td>XII</td><td>98</td><td>98.9%</td><td>15</td></tr>
+                                <tr><td>2023</td><td>X</td><td>120</td><td>100%</td><td>28</td></tr>
+                                <tr><td>2023</td><td>XII</td><td>95</td><td>97.8%</td><td>12</td></tr>
+                                <tr><td>2022</td><td>X</td><td>115</td><td>100%</td><td>25</td></tr>
+                                <tr><td>2022</td><td>XII</td><td>90</td><td>98.8%</td><td>14</td></tr>
+                            </table>
+                            <h4>Other Academic Information</h4>
+                            <p><a href="#">Transfer Certificate Sample</a></p>
+                            <p><a href="#">Academic Calendar 2025-26</a></p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false" id="accordion-button-4" aria-controls="accordion-panel-4">Staff Information</button>
+                        <div class="accordion-panel" id="accordion-panel-4" role="region" aria-labelledby="accordion-button-4">
+                            <h4>Teaching Staff (Sample Data)</h4>
+                            <table class="disclosure-table">
+                                <tr><th>S.No</th><th>Name</th><th>Designation</th><th>Qualification</th><th>Experience (Years)</th></tr>
+                                <tr><td>1</td><td>Mrs. Priya Sharma</td><td>PGT (Physics)</td><td>M.Sc. Physics, B.Ed.</td><td>12</td></tr>
+                                <tr><td>2</td><td>Mr. Ramesh Kumar</td><td>TGT (Maths)</td><td>M.Sc. Maths, B.Ed.</td><td>8</td></tr>
+                                <tr><td>3</td><td>Ms. Anita Singh</td><td>TGT (English)</td><td>M.A. English, B.Ed.</td><td>10</td></tr>
+                                <tr><td>4</td><td>Mr. Suresh Menon</td><td>PRT</td><td>B.A., D.El.Ed.</td><td>5</td></tr>
+                                <tr><td>5</td><td>Dr. Geetha Nair</td><td>PGT (Biology)</td><td>Ph.D. Botany, B.Ed.</td><td>15</td></tr>
+                                <!-- Add more sample staff as needed -->
+                            </table>
+                             <p><em>Note: Full staff list available at the school office.</em></p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false" id="accordion-button-5" aria-controls="accordion-panel-5">Fee Structure</button>
+                        <div class="accordion-panel" id="accordion-panel-5" role="region" aria-labelledby="accordion-button-5">
+                            <h4>Fee Structure 2025-2026 (Sample - Per Quarter)</h4>
+                            <table class="disclosure-table">
+                                <tr><th>Class</th><th>Admission Fee (One Time)</th><th>Tuition Fee</th><th>Development Fee</th><th>Other Charges (Lab, Library, etc.)</th><th>Total (Quarterly, approx.)</th></tr>
+                                <tr><td>I - V</td><td>₹ 10,000</td><td>₹ 9,000</td><td>₹ 1,500</td><td>₹ 1,000</td><td>₹ 11,500</td></tr>
+                                <tr><td>VI - VIII</td><td>₹ 10,000</td><td>₹ 10,500</td><td>₹ 1,800</td><td>₹ 1,200</td><td>₹ 13,500</td></tr>
+                                <tr><td>IX - X</td><td>₹ 12,000</td><td>₹ 12,000</td><td>₹ 2,000</td><td>₹ 1,500</td><td>₹ 15,500</td></tr>
+                                <tr><td>XI - XII (Science)</td><td>₹ 15,000</td><td>₹ 15,000</td><td>₹ 2,500</td><td>₹ 2,000</td><td>₹ 19,500</td></tr>
+                                <tr><td>XI - XII (Commerce)</td><td>₹ 15,000</td><td>₹ 14,000</td><td>₹ 2,500</td><td>₹ 1,500</td><td>₹ 18,000</td></tr>
+                            </table>
+                            <p><em>Note: Fees are subject to revision. Transport fees are separate. Please contact the accounts office for exact details.</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Gallery Section -->
+        <section id="gallery" class="page-section">
+            <div class="container">
+                <h2>Gallery & Resources</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1" alt="School Campus">
+                        <div class="gallery-caption">School Campus</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1" alt="Classroom Learning">
+                        <div class="gallery-caption">Classroom Learning</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/3775566/pexels-photo-3775566.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1" alt="Sports Activities">
+                        <div class="gallery-caption">Sports Activities</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/1164572/pexels-photo-1164572.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1" alt="School Events">
+                        <div class="gallery-caption">School Events</div>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="#" aria-label="Alumni Network"><img src="https://images.pexels.com/photos/8617968/pexels-photo-8617968.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1" alt="Alumni Network"></a>
+                        <div class="gallery-caption"><a href="#">Alumni Network</a></div>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="#" aria-label="Career Opportunities"><img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1" alt="Career Opportunities"></a>
+                        <div class="gallery-caption"><a href="#">Career Opportunities</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container container"> <!-- Use standard container -->
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#admission">Admission</a></li>
+                        <li><a href="#activities">Activities</a></li>
+                        <li><a href="#disclosure">Disclosure</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Sample Location, Sample City - 123456</p>
+                    <p><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:123-456-7890">123-456-7890</a></p>
+                    <p><i class="fas fa-mobile-alt" aria-hidden="true"></i> <a href="tel:987-654-3210">987-654-3210</a> (Mobile)</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@sampleschool.edu">info@sampleschool.edu</a> (Sample)</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Timings & Location</h4>
+                    <p><i class="fas fa-clock" aria-hidden="true"></i> Office: Mon - Fri, 8:00 AM - 4:00 PM</p> <!-- Added "Office:" for clarity -->
+                    <p><i class="fas fa-door-open" aria-hidden="true"></i> Visiting Hours: 10:00 AM - 12:00 PM (By Appointment)</p>
+                    <p><i class="fas fa-map-pin"></i> <a href="#" target="_blank" rel="noopener noreferrer" style="font-weight: 500;">Find Us on Google Maps</a></p> <!-- Slightly enhanced link text -->
+                </div>
+                <div class="footer-column">
+                    <h4>Connect & Legal</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <ul class="legal-links">
+                         <li><a href="#">Privacy Policy</a></li>
+                         <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sample School. All Rights Reserved. | Developed by <a href="https://algorithmazeai.com/" target="_blank" rel="noopener noreferrer">AlgorithmazeAI</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
