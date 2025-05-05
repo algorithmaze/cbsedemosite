@@ -128,6 +128,17 @@ img {
 .top-bar .left-icons i:hover {
     opacity: 0.8;
 }
+
+/* Ensure social icon links are white */
+.top-bar .left-icons > a { /* Target only direct children 'a' tags */
+    color: var(--white);
+}
+
+/* Ensure phone number links are white */
+.top-bar .left-icons span a {
+    color: var(--white);
+}
+
 .top-bar .left-icons span {
     margin-left: 15px;
 }
@@ -403,11 +414,10 @@ button:focus-visible,
     background-color: var(--background-light);
 }
 
-/* Add scroll margin to account for the sticky header */
+/* Add scroll margin to account for the sticky header - Adjust values as needed */
 section[id] { /* Target sections with an ID */
-    scroll-margin-top: 200px; /* Adjusted slightly lower (approx 5% of 200px) */
-    /* You might need to fine-tune this value. Inspect your sticky header's
-       total height in the browser dev tools and use that value or slightly more. */
+    scroll-margin-top: 220px; /* Approximate height of full header */
+    /* Fine-tune this value by inspecting the sticky header's height */
 }
 
 
@@ -571,11 +581,8 @@ section[id] { /* Target sections with an ID */
 /* --- Responsive --- */
 @media (max-width: 992px) {
     .site-header {
-        flex-direction: column;
-        /* Recalculate sticky header height for this breakpoint if needed */
-        /* section[id] {
-            scroll-margin-top: 200px; /* Example adjusted value */
-        /* } */
+        flex-direction: column; /* Stack logo and details */
+        padding-bottom: 10px; /* Add some space below details */
         align-items: center;
         text-align: center;
     }
@@ -583,7 +590,7 @@ section[id] { /* Target sections with an ID */
         margin: 0 0 10px 0;
     }
     .nav-links {
-        display: none; /* Hide links by default */
+        display: none; /* Hide links by default on mobile */
         flex-direction: column;
         width: 100%;
         position: absolute;
@@ -594,7 +601,7 @@ section[id] { /* Target sections with an ID */
         z-index: 999;
         border-top: 1px solid var(--border-color);
     }
-    .nav-links.active {
+    .nav-links.active { /* Class added by JS */
         display: flex; /* Show when active */
     }
     .nav-links li {
@@ -608,18 +615,24 @@ section[id] { /* Target sections with an ID */
         padding: 12px 15px;
         text-align: left;
     }
+    .nav-links a:hover,
+    .nav-links li:hover > a { /* Adjust hover for mobile */
+        background-color: var(--primary-color);
+        color: var(--white);
+    }
     .dropdown {
         position: static; /* Change dropdown position */
         box-shadow: none;
         border-top: none;
-        background-color: #eee; /* Slightly different bg for mobile dropdown */
+        background-color: #f0f0f0; /* Slightly different bg for mobile dropdown */
         display: none; /* Hide sub-items initially */
         width: 100%;
+        border-bottom: 1px solid var(--border-color); /* Add separator */
     }
     .nav-links li:hover .dropdown {
         display: none; /* Prevent hover opening on mobile */
     }
-     /* Toggle dropdown on click */
+     /* Toggle dropdown on click via 'open' class added by JS */
     .nav-links li.open .dropdown {
         display: block;
     }
@@ -628,6 +641,10 @@ section[id] { /* Target sections with an ID */
     }
     .menu-toggle {
         display: block; /* Show hamburger menu */
+    }
+    /* Adjust scroll margin for potentially taller header */
+    section[id] {
+        scroll-margin-top: 240px; /* Increased slightly */
     }
     .message-layout {
         flex-direction: column;
@@ -643,11 +660,10 @@ section[id] { /* Target sections with an ID */
 @media (max-width: 768px) {
     h2 { font-size: 1.8rem; }
     .top-bar { flex-direction: column; text-align: center; }
-    /* Recalculate sticky header height for this breakpoint if needed */
-    /* section[id] {
-        scroll-margin-top: 220px; /* Example adjusted value */
-    /* } */
     .top-bar .left-icons, .top-bar .right-links { margin-bottom: 5px; }
+    .top-bar .left-icons span { display: block; margin: 5px 0 0 0; } /* Stack phone numbers */
+    .top-bar .right-links { margin-top: 5px; }
+    .top-bar .right-links button { margin-bottom: 5px; } /* Space below button */
     .top-bar .right-links a, .top-bar .studybase-btn { margin: 0 5px; }
     .updates-container { flex-direction: column; }
     .view-all-btn { margin-top: 10px; margin-left: 0; }
@@ -655,16 +671,16 @@ section[id] { /* Target sections with an ID */
     .count-box h2 { font-size: 2.5rem; }
     .count-box p { font-size: 1rem; }
 }
+    /* Adjust scroll margin for potentially taller header */
+    section[id] {
+        scroll-margin-top: 260px; /* Increased again */
+    }
 
 @media (max-width: 576px) {
     body { font-size: 15px; }
     .site-header .school-details h1 { font-size: 1.5rem; }
-    /* Recalculate sticky header height for this breakpoint if needed */
-    /* section[id] {
-        scroll-margin-top: 250px; /* Example adjusted value */
-    /* } */
     .site-header .school-details p { font-size: 0.85rem; }
-    .carousel-btn { padding: 5px 10px; font-size: 1.2rem; }
+    .carousel-btn { padding: 8px 12px; font-size: 1.3rem; } /* Slightly larger buttons */
     .update-item { margin-right: 30px; }
     .update-date { font-size: 0.75rem; padding: 2px 6px;}
     .update-title { font-size: 0.9rem; }
@@ -673,8 +689,10 @@ section[id] { /* Target sections with an ID */
     .main-content {
         padding-top: 140px; /* Adjust again for smallest screens */
         padding-top: 0; /* REMOVED - Adjust again for smallest screens */ }
-}
-
+    /* Adjust scroll margin for potentially taller header */
+    section[id] {
+        scroll-margin-top: 280px; /* Increased again */
+    }
 /* --- Accordion Styles --- */
 .accordion-container {
     border: 1px solid var(--border-color);
@@ -941,4 +959,4 @@ section[id] { /* Target sections with an ID */
 }
 .footer-bottom a:hover {
     color: var(--white);
-}
+}}
